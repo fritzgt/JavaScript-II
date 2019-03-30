@@ -490,13 +490,47 @@ console.log(largeShirts);
 // ==== Challenge 4: Use .reduce() ====
 // The donations need to be tallied up and reported for tax purposes. Add up all the donations into a ticketPriceTotal array and log the result
 let ticketPriceTotal = [];
+
+const reducer = (accumulator, currentValue) => accumulator + currentValue;
+const nums = runners.forEach(i => ticketPriceTotal.push(i["donation"]));
+ticketPriceTotal = ticketPriceTotal.reduce(reducer);
+
 console.log(ticketPriceTotal);
 
 // ==== Challenge 5: Be Creative ====
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
 // Problem 1
+// The community center organizing the event wants all the participant's emails to send info about future fund raising events.
+
+let emails = [];
+runners.forEach(function(index) {
+  const emials = index["email"];
+  emails.push(emials);
+});
+
+console.log(emails);
 
 // Problem 2
+//  The event Director wants to have a special list of companies that donated more than $200 and the ammount donated
+let highDonations = [];
+
+runners.filter(function(runner) {
+  const donations = runner["donation"];
+  const company = runner["company_name"];
+  if (donations >= 200) {
+    highDonations.push(`Company: ${company}, Donated: $${donations}`);
+  }
+});
+
+console.log(highDonations);
 
 // Problem 3
+// The event director needs to have all the runner's first names converted to lowercase because he realized he must be humble.
+let lowerCase = [];
+runners.map(function(x) {
+  const name = x["first_name"];
+  const small = name.toLowerCase();
+  lowerCase.push(small);
+});
+console.log(lowerCase);
