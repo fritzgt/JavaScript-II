@@ -1,18 +1,16 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
 
-function greatClousure() {
+function outer() {
   const firstName = "Fritz";
-  // debugger;
   function inner() {
     const lastName = "Gamboa";
     console.log(firstName + " " + lastName);
   }
   inner();
-  // debugger;
 }
 
-greatClousure();
+outer();
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 

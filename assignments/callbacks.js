@@ -68,6 +68,12 @@ function contains(item, list, cb) {
 
 function removeDuplicates(array, cb) {
   // removeDuplicates removes all duplicate values from the given array.
+
+  const unique = array.map(x => x);
+
   // Pass the duplicate free array to the callback function.
+
+  return cb(unique);
+
   // Do not mutate the original array.
 }
