@@ -1,9 +1,20 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
 
+function greatClousure() {
+  const firstName = "Fritz";
+  // debugger;
+  function inner() {
+    const lastName = "Gamboa";
+    console.log(firstName + " " + lastName);
+  }
+  inner();
+  // debugger;
+}
+
+greatClousure();
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
-
 
 // ==== Challenge 2: Create a counter function ====
 const counter = () => {
